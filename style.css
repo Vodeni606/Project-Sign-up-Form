@@ -1,26 +1,30 @@
 body {
     margin: 0;
-    display: flex;
-    flex-direction: column;
     min-height: 100vh;
-    padding-left: 200px;
-    padding-right: 200px;
-
+    background-color:   gray; /* SIDE COLOR */
+    display: flex;
+    justify-content: center; 
 }
+
 
 .main-container {
     display: flex;
-    flex: 1;
+    width: 100%;
+    max-width: 1200px;
+    background-color: white;
+    min-height: 100vh;
 }
 
+/* LEFT IMAGE */
 .image-section {
+    flex: 0 0 400px;
     background-image: url(/image/background-image.jpg);
     background-size: cover;
     background-position: center;
-    width: 400px;
     position: relative;
 }
 
+/* ODIN TEXT */
 .odin {
     position: absolute;
     left: 50%;
@@ -31,64 +35,71 @@ body {
     font-size: 48px;
 }
 
+/* RIGHT SIDE */
 .content-section {
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
 }
 
+/* TOP TEXT */
 .top-section {
-    padding: 20px;
-    display: flex;
-    flex: 1;
-    flex-wrap: wrap;
-    max-height: 100px;
-    max-width: 500px;
-
+    padding: 40px 20px;
     font-size: 20px;
+    max-width: 500px;
 }
 
-.bottom-section {
-    background-color: #f0f0f0;
-    padding: 20px;
-    text-align: center;
-    border-top: 1px solid #ddd;
-    margin-top: auto;
-    
-
-}
-
-.signup-form{
+/* FORM */
+.signup-form {
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
-    max-height: 300px;
-    padding: 20px;
-    margin-top: 100px;
-    margin-left: 20px;
-    justify-content: center;
-    border-color: aqua;
-    border: solid;
+    gap: 20px;
+    padding: 30px 20px;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin: 20px;
+    border-radius: 8px;
 }
 
+/* INPUT GROUP */
 .form-group {
     display: flex;
-    flex: 1;
     flex-direction: column;
-    margin-bottom: 20px;
-    flex-basis: 20%;
-    flex-grow: 1;
-    max-width: 300px;
-
+    width: 45%;
 }
 
+.form-group input {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+/* BUTTON */
 .submit-btn {
-    display: flex;
-    max-width: 100px;
-    margin-left: 20px;
-    margin-top: 5px;
-    padding: 10px;
+    margin: 20px;
+    padding: 12px 20px;
     color: white;
     background: green;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 150px;
 }
+
+/* FOOTER */
+.bottom-section {
+    margin-top: auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #f0f0f0;
+    border-top: 1px solid #ddd;
+}
+
+input:invalid {
+    border: 2px solid red;
+}
+
+input:valid {
+    border: 2px solid green;
+}   
